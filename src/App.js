@@ -8,7 +8,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      <h1 className='bg-primary'>Login</h1>
        <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
