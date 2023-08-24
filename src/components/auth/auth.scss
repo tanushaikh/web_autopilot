@@ -1,5 +1,8 @@
 // Register Page
-
+.register-project-container-images{
+  min-height: 100vh;
+  // height: 100vh;
+}
 .register-project-images-and-text-container {
   display: flex;
   flex-direction: column;
@@ -58,7 +61,8 @@
   }
   .register-input-box {
     border: none;
-    padding: 5px 50px;
+    padding: 5px 5px;
+    padding-right: 50px;
   }
   .register-input-box:focus {
     outline: none;
