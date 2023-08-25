@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "./RegisterForm.scss"
 
 const RegisterForm = () => {
 
@@ -10,7 +11,7 @@ const RegisterForm = () => {
     const [passwordShow, setPasswordShow] = useState(false);
     return (
         <div className="text-center register-container">
-            <div className="register-page-main-heading">
+            <div className="text-start title-login-and-signup">
                 Sign Up for an Account
             </div>
             <form>
@@ -172,10 +173,10 @@ const RegisterForm = () => {
                         )}
                     </div>
                 </div>
-                <div className="text-start text-gray-500 registration-terms-and-condition">
+                <div className="text-start very-small-text">
                     Your password must have at least 8 characters
                 </div>
-                <div className="text-start d-flex text-gray-500 registration-terms-and-condition my-4">
+                <div className="text-start d-flex very-small-text my-4">
                     <div className="mt-1">
                         <input type="checkbox" />
                     </div>
@@ -185,8 +186,10 @@ const RegisterForm = () => {
                         <b className="text-black">Privacy Policy</b>
                     </div>
                 </div>
-                <div className="register-page-signup-button-container">
-                    <button>Sign Up</button>
+                <div
+                //  className="register-page-signup-button-container"
+                >
+                    <button className='button'>Sign Up</button>
                 </div>
             </form>
             <div className="d-flex align-items-center my-4">
@@ -209,7 +212,7 @@ const RegisterForm = () => {
                         />
                     </svg>
                 </div>
-                <div className="registration-terms-and-condition mx-2">
+                <div className="very-small-text mx-2">
                     Or sign up with
                 </div>
                 <div>
@@ -263,7 +266,7 @@ const RegisterForm = () => {
                     <div className="mx-1">Google</div>
                 </div>
             </div>
-            <div className="register-page-already-have-account-text my-4">
+            <div className="small-text my-4">
                 Already have an account?<Link className="Link-tag"> Log In</Link>
             </div>
         </div>

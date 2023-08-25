@@ -43,10 +43,15 @@ $theme-colors: (
 // $enable-grid-classes: true;
 // $enable-print-styles: true;
 // $enable-validation-icons: true;
-
+$primary: #2563eb;
 $grid-columns: 24;
 $shadow-red: 0px 1px 2px 0px rgb(247, 19, 19);
 $input-color: 1px solid #e2e8f0;
 $input-btn-focus-color: #00ffbb;
+$btn-border-radius-lg: 0.75rem;
+$btn-border-radius-sm: 0.50rem;
+$input-btn-font-size: 1rem;
+$input-font-weight: 700;
+$font-weight-normal: 400;
 
 @import "../node_modules/bootstrap/scss/bootstrap";

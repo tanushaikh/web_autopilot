@@ -7,8 +7,10 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ProductImage from "./register/ProductImage";
-import RegisterForm from "./register/RegisterForm";
+import RegisterForm from "./register/registerForm/RegisterForm";
 import VerifyOTP from "./register/verifyOTP/VerifyOTP";
+import ResetPassword from "./register/resetPassword/ResetPassword";
+import SetNewPassword from "./register/setNewPassword/SetNewPassword";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -40,7 +42,9 @@ const Register = () => {
         </div>
         <div className="col-lg-12 container">
           {/* <RegisterForm /> */}
-          <VerifyOTP />
+          {/* <VerifyOTP /> */}
+          {/* <ResetPassword /> */}
+          <SetNewPassword />
         </div>
       </div>
     </>

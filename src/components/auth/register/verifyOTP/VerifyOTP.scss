@@ -1,12 +1,11 @@
-.verify-otp-container{
+.verify-otp-container {
     max-width: 500px;
     margin: auto;
 }
-.verify-otp-container-all{
+
+.verify-otp-container-all {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
 }

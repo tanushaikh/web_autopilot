@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './common.scss'
 import './style.scss'
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
