@@ -5,15 +5,20 @@ import './style.scss'
 import Login from './components/auth/login/Login';
 import Register from './components/auth/register/Register';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Authentication from './components/auth/Authentication';
 
 function App() {
+
+
+
   return (
     <div className="App">
-       <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          {/* <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} /> */}
           <Route path="/" element={<h1>Home page</h1>} />
+          <Route path="/authentication" element={<Authentication />} />
         </Routes>
       </BrowserRouter>
 

@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
-
+import { useSelector, useDispatch } from 'react-redux'
+import { handleAuth } from '../../../../redux/slices/AuthSlice'
 const LoginForm = () => {
+    const data = useSelector((state) => state.auth.value)
+    const dispatch = useDispatch()
     const [showPassword, setShowPassword] = useState(false)
     return (
         <div className='common-container-wraper'>
@@ -112,7 +115,7 @@ const LoginForm = () => {
                             <span className='ms-2 small-text text-black'>Remember me</span>
                         </div>
                         <div>
-                            <Link className='Link-tag'>Forgot Password?</Link>
+                            <Link onClick={() => dispatch(handleAuth("resetPassword"))} className='Link-tag'>Forgot Password?</Link>
                         </div>
                     </div>
                     <div className='mt-4'>
@@ -144,7 +147,7 @@ const LoginForm = () => {
                             <span className='ms-2'>Google</span>
                         </div>
                     </div>
-                    <div className='mt-4 small-text'>Don’t have an account? <Link className='Link-tag'>Sign Up</Link></div>
+                    <div className='mt-4 small-text'>Don’t have an account? <Link onClick={() => dispatch(handleAuth("register"))} className='Link-tag'>Sign Up</Link></div>
                 </div>
             </div>
         </div>

@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import './ResetPassword.scss'
-
+import { useSelector, useDispatch } from 'react-redux'
+import { handleAuth } from '../../../../redux/slices/AuthSlice'
 const ResetPassword = () => {
+    const data = useSelector((state) => state.auth.value)
+    const dispatch = useDispatch()
     return (
         <div className='common-container-wraper'>
             <div className='common-container'>
@@ -29,7 +32,7 @@ const ResetPassword = () => {
                         </button>
                     </div>
                     <div className='mt-4'>
-                        <Link className="Link-tag">Back to Sign In</Link>
+                        <Link onClick={() => dispatch(handleAuth("login"))} className="Link-tag">Back to Sign In</Link>
                     </div>
                 </div>
             </div>

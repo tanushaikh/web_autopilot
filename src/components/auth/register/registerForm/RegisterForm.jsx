@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./RegisterForm.scss"
-
+import { useSelector, useDispatch } from 'react-redux'
+import { handleAuth } from '../../../../redux/slices/AuthSlice'
 const RegisterForm = () => {
-
+    const data = useSelector((state) => state.auth.value)
+    const dispatch = useDispatch()
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -267,7 +269,7 @@ const RegisterForm = () => {
                 </div>
             </div>
             <div className="small-text my-4">
-                Already have an account?<Link className="Link-tag"> Log In</Link>
+                Already have an account?<Link onClick={() => dispatch(handleAuth("login"))} className="Link-tag"> Log In</Link>
             </div>
         </div>
     )
