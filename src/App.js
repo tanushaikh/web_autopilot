@@ -2,8 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import './common.scss'
 import './style.scss'
-import Login from './components/auth/Login';
-import Register from './components/auth/Register';
+import Login from './components/auth/login/Login';
+import Register from './components/auth/register/Register';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {

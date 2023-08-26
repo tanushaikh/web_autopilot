@@ -106,3 +106,35 @@ $greyscale-600: #475569;
 .icon-input-box:focus {
     outline: none;
 }
+
+// input select common css
+
+.input-select-container {
+    display: flex;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 0.75rem;
+    border: 1px solid $greyscale-200;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
+}
+
+.icon-input-select {
+    border: none;
+    width: 100%;
+    color: $greyscale-400;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.25rem 0;
+}
+
+.icon-input-select:focus {
+    outline: none;
+}
+
+// sign-in-with 
+
+.sign-in-with-line {
+    height: 2px;
+    width: 9rem;
+}

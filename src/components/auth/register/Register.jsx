@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import "./auth.scss";
+import "../auth.scss";
 import axios from "axios";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import ProductImage from "./register/ProductImage";
-import RegisterForm from "./register/registerForm/RegisterForm";
-import VerifyOTP from "./register/verifyOTP/VerifyOTP";
-import ResetPassword from "./register/resetPassword/ResetPassword";
-import SetNewPassword from "./register/setNewPassword/SetNewPassword";
+import ProductImage from "./ProductImage";
+import RegisterForm from "./registerForm/RegisterForm";
+import VerifyOTP from "./verifyOTP/VerifyOTP";
+import ResetPassword from "./resetPassword/ResetPassword";
+import SetNewPassword from "./setNewPassword/SetNewPassword";
 
 const Register = () => {
   const [name, setName] = useState("");

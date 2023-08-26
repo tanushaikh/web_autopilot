@@ -1,8 +1,8 @@
 import React from 'react'
-
+import '../auth.scss'
 const ProductImage = () => {
     return (
-        <div className="register-project-container-images">
+        <div className="register-project-container-images bg-primary">
             <div className="register-project-images-and-text-container">
                 <div className="register-page-product-image-container">
                     <svg
