@@ -36,7 +36,7 @@ const SetNewPassword = () => {
                         </div>
                         <div className='my-4'>
                             <div className="text-start font-weight-normal">New Password</div>
-                            <div className='input-box-container'>
+                            <div className={errors.password && touched.password ? "register-input-icon-container-error" : "register-input-icon-container"}>
                                 <div className='d-flex'>
                                     <div>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -126,7 +126,7 @@ const SetNewPassword = () => {
                         </div>
                         <div className='pb-4'>
                             <div className='text-start'>Confirm New Password</div>
-                            <div className='input-box-container'>
+                            <div className={errors.confirm_password && touched.confirm_password ? "register-input-icon-container-error" : "register-input-icon-container"}>
                                 <div className='d-flex'>
                                     <div>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -31,7 +31,7 @@ const VerifyOTP = () => {
                             <div className='my-4'>
                                 <div>
                                     <input
-                                        className=' py-2 input-box auth-input-box'
+                                        className={errors.otp && touched.otp ? "input-box-error auth-input-box" : "input-box auth-input-box"}
                                         name='otp'
                                         value={values.otp}
                                         onChange={handleChange}
