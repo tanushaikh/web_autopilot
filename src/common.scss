@@ -94,6 +94,16 @@ $greyscale-600: #475569;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
 }
 
+.input-box-container-error {
+    display: flex;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 0.75rem;
+    border: 1px solid #ED4F9D;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
+}
+
 .icon-input-box {
     border: none;
     width: 22.25rem;

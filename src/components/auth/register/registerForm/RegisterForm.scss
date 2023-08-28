@@ -18,6 +18,26 @@
     }
 }
 
+.register-input-icon-container-error {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ED4F9D;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
+    width: 100%;
+
+    .register-input-icon {}
+
+    .register-input-box {
+        border: none;
+        padding: 5px 5px;
+        padding-right: 50px;
+    }
+
+    .register-input-box:focus {
+        outline: none;
+    }
+}
+
 .registration-terms-and-condition {
     font-size: 0.76rem;
     font-weight: 400;

@@ -13,6 +13,7 @@ const Authentication = () => {
     useEffect(() => {
         renderStep()
     }, [AuthData])
+    
     const renderStep = () => {
         switch (AuthData) {
             case 'login':
