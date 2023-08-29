@@ -6,6 +6,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { handleAuth } from "../../../../redux/slices/AuthSlice";
 import { useFormik } from "formik";
 import { signUpSchema } from "../../../../schemas/Schema";
+import { GoogleLogin } from "@react-oauth/google";
+import jwt_decode from "jwt-decode";
+import { useNavigate } from "react-router-dom";
+
 
 const initialValues = {
     username: "",
@@ -18,6 +22,7 @@ const RegisterForm = () => {
     const data = useSelector((state) => state.auth.value);
     const dispatch = useDispatch();
     const [passwordShow, setPasswordShow] = useState(false);
+    const navigate = useNavigate();
 
     const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
         useFormik({
@@ -433,7 +438,7 @@ const RegisterForm = () => {
                     </svg>
                 </div>
             </div>
-            <div className="register-page-login-with-google">
+            {/* <div className="register-page-login-with-google">
                 <div className="d-flex align-items-center justify-content-center">
                     <div>
                         <svg
@@ -464,7 +469,22 @@ const RegisterForm = () => {
                     </div>
                     <div className="mx-1">Google</div>
                 </div>
-            </div>
+            </div> */}
+            <GoogleLogin
+                onSuccess={(credentialResponse) => {
+                    let decoded = jwt_decode(credentialResponse.credential);
+                    console.log(decoded);
+                    if (decoded.name) {
+                        navigate("/");
+                    }
+
+                }}
+                onError={() => {
+                    console.log("Login Failed");
+                }}
+                size="large"
+                width={400}
+            />
             <div className="small-text my-4">
                 Already have an account?
                 <Link

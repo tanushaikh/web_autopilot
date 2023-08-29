@@ -6,7 +6,8 @@ import { useFormik } from "formik";
 import { LoginSchema } from "../../../../schemas/Schema";
 import { GoogleLogin } from "@react-oauth/google";
 import jwt_decode from "jwt-decode";
-
+import { useNavigate } from "react-router-dom";
+import { googleLogout } from '@react-oauth/google';
 const initialValues = {
   email: "",
   password: "",
@@ -18,6 +19,7 @@ const LoginForm = ({ loginWithRedirect }) => {
   const dispatch = useDispatch();
   const [showPassword, setShowPassword] = useState(false);
 
+  const navigate = useNavigate();
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues,
@@ -390,12 +392,20 @@ const LoginForm = ({ loginWithRedirect }) => {
               onSuccess={(credentialResponse) => {
                 let decoded = jwt_decode(credentialResponse.credential);
                 console.log(decoded);
+                if (decoded.name) {
+                  navigate("/");
+                }
               }}
               onError={() => {
                 console.log("Login Failed");
               }}
+              size="large"
+              width={500}
+              logo_alignment="left"
             />
           </div>
+          {/* <button onClick={() => googleLogout()}>logout</button> */}
+
           <div className="mt-4 small-text">
             Don’t have an account?{" "}
             <Link
