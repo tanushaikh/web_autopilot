@@ -1,165 +1,168 @@
 $primary: #2563eb;
 $black: black;
-$greyscale-200: #E2E8F0;
-$greyscale-400: #94A3B8;
-$greyscale-500: #64748B;
+$greyscale-200: #e2e8f0;
+$greyscale-400: #94a3b8;
+$greyscale-500: #64748b;
 $greyscale-600: #475569;
 
+.width-100 {
+  width: 100%;
+}
 .common-container-wraper {
-    max-width: 500px;
-    margin: auto;
+  max-width: 500px;
+  margin: auto;
 }
 
 .common-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .Link-tag {
-    text-decoration: none;
-    color: #2563eb;
-    font-size: 0.875rem;
-    font-weight: 700;
+  text-decoration: none;
+  color: #2563eb;
+  font-size: 0.875rem;
+  font-weight: 700;
 }
 
 .button {
-    display: flex;
-    padding: 0.75rem 1rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.75rem;
-    background: $primary;
-    border: none;
-    color: #fff;
-    font-weight: 700;
-    width: 100%;
+  display: flex;
+  padding: 0.75rem 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.75rem;
+  background: $primary;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  width: 100%;
 }
 
 .title-login-and-signup {
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 700;
-    color: $black;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  color: $black;
 }
 
 .very-small-text {
-    color: $greyscale-500;
-    font-size: 0.75rem;
-    font-style: normal;
-    font-weight: 400;
+  color: $greyscale-500;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .small-text {
-    color: $greyscale-500;
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 400;
+  color: $greyscale-500;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .input-box {
-    display: flex;
-    padding: 0.5rem 1rem !important;
-    color: $greyscale-400;
-    align-items: center;
-    gap: 0.75rem;
-    border-radius: 0.75rem;
-    border: 1px solid $greyscale-200;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
+  display: flex;
+  padding: 0.5rem 1rem !important;
+  color: $greyscale-400;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid $greyscale-200;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
 }
 
 .input-box-error {
-    display: flex;
-    padding: 0.5rem 1rem !important;
-    color: $greyscale-400;
-    align-items: center;
-    gap: 0.75rem;
-    border-radius: 0.75rem;
-    border: 1px solid #ED4F9D;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
+  display: flex;
+  padding: 0.5rem 1rem !important;
+  color: $greyscale-400;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid #ed4f9d;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
 }
 
 .input-box:focus {
-    outline: none;
+  outline: none;
 }
 
 .input-box-error:focus {
-    outline: none;
+  outline: none;
 }
 
 .auth-input-box {
-    min-width: 400px;
+  min-width: 400px;
 }
 
 @media screen and (max-width: 600px) {
-    .auth-input-box {
-        min-width: 210px;
-    }
+  .auth-input-box {
+    min-width: 210px;
+  }
 }
 
-// input common css 
+// input common css
 .input-box-container {
-    display: flex;
-    padding: 0.5rem 1rem;
-    align-items: center;
-    gap: 0.75rem;
-    border-radius: 0.75rem;
-    border: 1px solid $greyscale-200;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
+  display: flex;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid $greyscale-200;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
 }
 
 .input-box-container-error {
-    display: flex;
-    padding: 0.5rem 1rem;
-    align-items: center;
-    gap: 0.75rem;
-    border-radius: 0.75rem;
-    border: 1px solid #ED4F9D;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
+  display: flex;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid #ed4f9d;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
 }
 
 .icon-input-box {
-    border: none;
-    width: 22.25rem;
-    color: $greyscale-400;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 0.25rem 0;
+  border: none;
+  width: 22.25rem;
+  color: $greyscale-400;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.25rem 0;
 }
 
 .icon-input-box:focus {
-    outline: none;
+  outline: none;
 }
 
 // input select common css
 
 .input-select-container {
-    display: flex;
-    padding: 0.5rem 1rem;
-    align-items: center;
-    gap: 0.75rem;
-    border-radius: 0.75rem;
-    border: 1px solid $greyscale-200;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
+  display: flex;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid $greyscale-200;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
 }
 
 .icon-input-select {
-    border: none;
-    width: 100%;
-    color: $greyscale-400;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 0.25rem 0;
+  border: none;
+  width: 100%;
+  color: $greyscale-400;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.25rem 0;
 }
 
 .icon-input-select:focus {
-    outline: none;
+  outline: none;
 }
 
-// sign-in-with 
+// sign-in-with
 
 .sign-in-with-line {
-    height: 2px;
-    width: 9rem;
+  height: 2px;
+  width: 9rem;
 }
