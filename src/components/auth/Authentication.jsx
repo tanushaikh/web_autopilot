@@ -7,10 +7,10 @@ import LoginForm from "./login/loginForm/LoginForm";
 import ResetPassword from "./register/resetPassword/ResetPassword";
 import SetNewPassword from "./register/setNewPassword/SetNewPassword";
 import VerifyOTP from "./register/verifyOTP/VerifyOTP";
-import { useAuth0 } from "@auth0/auth0-react";
+// import { useAuth0 } from "@auth0/auth0-react";
 const Authentication = () => {
   const AuthData = useSelector((state) => state.auth.value);
-  const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
+  // const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
 
   useEffect(() => {
     renderStep();
@@ -20,7 +20,7 @@ const Authentication = () => {
   const renderStep = () => {
     switch (AuthData) {
       case "login":
-        return <LoginForm loginWithRedirect={loginWithRedirect} />;
+        return <LoginForm />;
       case "register":
         return <RegisterForm />;
       case "resetPassword":
