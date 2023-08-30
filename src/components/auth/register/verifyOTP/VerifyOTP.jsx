@@ -27,12 +27,23 @@ const VerifyOTP = () => {
                         <div className='text-start'>
                             <h5 className="title-login-and-signup mb-2">Verify OTP</h5>
                             <div className='small-text mb-1'>We’ve sent a 6 digit code to your </div>
-                            <div className='small-text'>example@gmail.com</div>
+                            <div className='small-text text-gray-500'><b>example@gmail.com</b></div>
                             <div className='my-4'>
-                                <div>
+                                {/* <div>
                                     <input
                                         className={errors.otp && touched.otp ? "input-box-error auth-input-box" : "input-box auth-input-box"}
                                         name='otp'
+                                        placeholder='Enter 6 digit code'
+                                        value={values.otp}
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                    />
+                                </div> */}
+                                <div className={errors.otp && touched.otp ? "input-box-container-error" : "input-box-container"}>
+                                    <input
+                                        className='icon-input-box'
+                                        name='otp'
+                                        placeholder='Enter 6 digit code'
                                         value={values.otp}
                                         onChange={handleChange}
                                         onBlur={handleBlur}

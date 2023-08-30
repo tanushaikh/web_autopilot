@@ -75,7 +75,7 @@ const LoginForm = ({ loginWithRedirect }) => {
                       />
                     </svg>
                     <input
-                      className="py-2 icon-input-box ms-2"
+                      className=" icon-input-box ms-2"
                       placeholder="Email"
                       type="email"
                       name="email"
@@ -161,7 +161,7 @@ const LoginForm = ({ loginWithRedirect }) => {
                       />
                     </svg>
                     <input
-                      className="py-2 icon-input-box ms-2"
+                      className=" icon-input-box ms-2"
                       placeholder="Password"
                       type={showPassword ? "text" : "password"}
                       name="password"
@@ -276,8 +276,8 @@ const LoginForm = ({ loginWithRedirect }) => {
                 <select
                   className={
                     values.category
-                      ? "py-2 icon-input-select text-black"
-                      : "py-2 icon-input-select text-gray-400"
+                      ? " icon-input-select text-black"
+                      : " icon-input-select text-gray-400"
                   }
                   id="cars"
                   name="category"
@@ -285,13 +285,11 @@ const LoginForm = ({ loginWithRedirect }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                 >
-                  <option className="text-gray-400" value="">
-                    Select Business Type
-                  </option>
-                  <option value="shop">Shop</option>
-                  <option value="hotel">Hotel</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
+                  <option className="category-options text-gray-400" value="">Select Business Type</option>
+                  <option className="category-options" value="shop">Shop</option>
+                  <option className="category-options" value="hotel">Hotel</option>
+                  <option className="category-options" value="mercedes">Mercedes</option>
+                  <option className="category-options" value="audi">Audi</option>
                 </select>
               </div>
 
