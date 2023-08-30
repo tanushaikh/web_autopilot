@@ -7,7 +7,7 @@ import { LoginSchema } from "../../../../schemas/Schema";
 import { GoogleLogin } from "@react-oauth/google";
 import jwt_decode from "jwt-decode";
 import { useNavigate } from "react-router-dom";
-import { googleLogout } from '@react-oauth/google';
+import { googleLogout } from "@react-oauth/google";
 const initialValues = {
   email: "",
   password: "",
@@ -400,7 +400,7 @@ const LoginForm = ({ loginWithRedirect }) => {
                 console.log("Login Failed");
               }}
               size="large"
-              width={500}
+              // width={500}
               logo_alignment="left"
             />
           </div>
