@@ -10,16 +10,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 :root{
   font-size: 100%;
 }
 @media (max-width: 768px){
   :root{
     font-size: 75%;
+  }
+}
+
+@media (max-width: 400px){
+  :root{
+    font-size: 70%;
   }
 }

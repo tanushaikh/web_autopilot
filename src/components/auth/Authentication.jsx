@@ -16,7 +16,6 @@ const Authentication = () => {
     renderStep();
   }, [AuthData]);
 
-  console.log(user);
   const renderStep = () => {
     switch (AuthData) {
       case "login":
