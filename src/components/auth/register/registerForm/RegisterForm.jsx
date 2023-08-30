@@ -9,7 +9,7 @@ import { signUpSchema } from "../../../../schemas/Schema";
 import { GoogleLogin } from "@react-oauth/google";
 import jwt_decode from "jwt-decode";
 import { useNavigate } from "react-router-dom";
-
+// import "../../../../common.scss";
 const initialValues = {
   username: "",
   email: "",
@@ -397,39 +397,36 @@ const RegisterForm = () => {
           </button>
         </div>
       </form>
-      <div className="d-flex align-items-center my-4">
+      <div className="my-4 d-flex align-items-center justify-content-center">
         <div>
           <svg
-            className="img-fluid"
-            width="120"
-            height="2"
-            viewBox="0 0 143 2"
+            className="sign-in-with-line"
+            viewBox="0 0 145 2"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <line
               x1="0.5"
               y1="1"
-              x2="142.5"
+              x2="144.5"
               y2="1"
               stroke="#E2E8F0"
               stroke-linecap="round"
             />
           </svg>
         </div>
-        <div className="very-small-text mx-2">Or sign up with</div>
+        <div className="small-text mx-2">Or sign in with</div>
         <div>
           <svg
-            width="120"
-            height="2"
-            viewBox="0 0 143 2"
+            className="sign-in-with-line"
+            viewBox="0 0 145 2"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <line
               x1="0.5"
               y1="1"
-              x2="142.5"
+              x2="144.5"
               y2="1"
               stroke="#E2E8F0"
               stroke-linecap="round"

@@ -404,9 +404,7 @@ const LoginForm = ({ loginWithRedirect }) => {
               logo_alignment="left"
             />
           </div>
-          {/* <button onClick={() => googleLogout()}>logout</button> */}
-
-          <div className="mt-4 small-text">
+          <div className="text-center mt-4 small-text">
             Don’t have an account?{" "}
             <Link
               onClick={() => dispatch(handleAuth("register"))}
