@@ -1,5 +1,5 @@
 $primary: #2563eb;
-$black: black;
+$black: #0f172a;
 $greyscale-200: #e2e8f0;
 $greyscale-400: #94a3b8;
 $greyscale-500: #64748b;
@@ -126,9 +126,9 @@ $greyscale-600: #475569;
 .icon-input-box {
   border: none;
   width: 22.25rem;
-  color: $greyscale-400;
+  color: $black;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 600;
   padding: 0.25rem 0;
 }
 
@@ -151,9 +151,8 @@ $greyscale-600: #475569;
 .icon-input-select {
   border: none;
   width: 100%;
-  color: $greyscale-400;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   padding: 0.25rem 0;
 }
 
