@@ -35,7 +35,7 @@ const SetNewPassword = () => {
                             <div className='text-start small-text mt-1'>Example@gmail.com</div>
                         </div>
                         <div className='my-4'>
-                            <div className="text-start font-weight-normal">New Password</div>
+                            <div className="text-start font-weight-normal mb-2">New Password</div>
                             <div className={errors.password && touched.password ? "input-box-container-error" : "input-box-container"}>
                                 <div className='d-flex align-items-center'>
                                     <div>
@@ -48,6 +48,7 @@ const SetNewPassword = () => {
                                             className='icon-input-box ms-2'
                                             type={showPassword ? "text" : "password"}
                                             name='password'
+                                            placeholder='New Password'
                                             value={values.password}
                                             onChange={handleChange}
                                             onBlur={handleBlur}
@@ -125,9 +126,9 @@ const SetNewPassword = () => {
                             ) : null}
                         </div>
                         <div className='pb-4'>
-                            <div className='text-start'>Confirm New Password</div>
+                            <div className='text-start mb-2'>Confirm New Password</div>
                             <div className={errors.confirm_password && touched.confirm_password ? "input-box-container-error" : "input-box-container"}>
-                                <div className='d-flex'>
+                                <div className='d-flex lign-items-center'>
                                     <div>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M17 11H7C5.89543 11 5 11.8954 5 13V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V13C19 11.8954 18.1046 11 17 11Z" stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -138,12 +139,13 @@ const SetNewPassword = () => {
                                             className='icon-input-box ms-2'
                                             type={showPassword1 ? "text" : "password"}
                                             name="confirm_password"
+                                            placeholder='Confirm New Password'
                                             value={values.confirm_password}
                                             onChange={handleChange}
                                             onBlur={handleBlur}
                                         />
                                     </div>
-                                    <div>
+                                    <div className='mt-1'>
                                         {showPassword1 ? (
                                             <svg
                                                 onClick={() => setShowPassword1(!showPassword1)}
