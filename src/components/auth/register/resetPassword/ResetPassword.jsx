@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import './ResetPassword.scss'
 import { useSelector, useDispatch } from 'react-redux'
 import { handleAuth } from '../../../../redux/slices/AuthSlice'
 import { useFormik } from "formik";

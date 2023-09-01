@@ -1,5 +1,4 @@
 import React from 'react'
-import '../auth.scss'
 import { useSelector, useDispatch } from 'react-redux'
 import { handleAuth } from '../../../redux/slices/AuthSlice'
 const ProductImage = () => {
@@ -14,7 +13,9 @@ const ProductImage = () => {
             <button onClick={() => dispatch(handleAuth("verifyOTP"))}>verifyOTP</button>
             <button onClick={() => dispatch(handleAuth("setNewPassword"))}>setNewPassword</button>
 
-            <div style={{ height: "100vh" }} className="register-project-images-and-text-container">
+            <div
+                style={{ height: "86vh" }}
+                className="register-project-images-and-text-container">
                 <div className="register-page-product-image-container">
                     <svg
                         className="img-fluid"

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "./RegisterForm.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { handleAuth } from "../../../../redux/slices/AuthSlice";
 import { useFormik } from "formik";

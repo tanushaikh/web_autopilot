@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import './VerifyOTP.scss'
 import Button from 'react-bootstrap/Button';
 import { useFormik } from "formik";
 import { verifyOtpSchema } from "../../../../schemas/Schema";
