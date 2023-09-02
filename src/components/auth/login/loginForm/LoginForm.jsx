@@ -339,8 +339,9 @@ const LoginForm = ({ loginWithRedirect }) => {
               ) : null}
             </div>
             <div className="py-2 d-flex align-items-center justify-content-between">
-              <div>
+              <div className="d-flex align-items-center">
                 <input
+                  className="checkbox"
                   type="checkbox"
                   name="TermsAndConditions"
                   value={values.TermsAndConditions}

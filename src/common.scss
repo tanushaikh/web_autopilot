@@ -60,7 +60,7 @@ $greyscale-600: #475569;
   color: $greyscale-500;
   font-size: 0.875rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .input-box {
@@ -184,4 +184,7 @@ $greyscale-600: #475569;
 .sign-in-with-line {
   height: 2px;
   width: 9rem;
+}
+.checkbox {
+  // size: 24px;
 }
