@@ -12,6 +12,7 @@ const ProductImage = () => {
             <button onClick={() => dispatch(handleAuth("resetPassword"))}>resetPassword</button>
             <button onClick={() => dispatch(handleAuth("verifyOTP"))}>verifyOTP</button>
             <button onClick={() => dispatch(handleAuth("setNewPassword"))}>setNewPassword</button>
+            <button onClick={() => dispatch(handleAuth("RegisterInfo"))}>RegisterInfo</button>
 
             <div
                 style={{ height: "86vh" }}

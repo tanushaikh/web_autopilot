@@ -7,6 +7,7 @@ import LoginForm from "./login/loginForm/LoginForm";
 import ResetPassword from "./register/resetPassword/ResetPassword";
 import SetNewPassword from "./register/setNewPassword/SetNewPassword";
 import VerifyOTP from "./register/verifyOTP/VerifyOTP";
+import RegisterInfo from "./register/registerInformation/RegisterInfo";
 // import { useAuth0 } from "@auth0/auth0-react";
 const Authentication = () => {
   const AuthData = useSelector((state) => state.auth.value);
@@ -28,6 +29,8 @@ const Authentication = () => {
         return <SetNewPassword />;
       case "verifyOTP":
         return <VerifyOTP />;
+      case "RegisterInfo":
+        return <RegisterInfo />;
       default:
         return null;
     }
