@@ -40,3 +40,13 @@ export const SetNewPasswordSchema = Yup.object({
 export const verifyOtpSchema = Yup.object({
     otp: Yup.number().required("Please enter your 6 digit otp"),
 });
+
+
+// Information
+export const RegisterInfoSchema = Yup.object({
+    fullName: Yup.string().min(2).max(25).required("Please enter your name"),
+    mobileNo: Yup.number().required("Please enter your 6 digit otp"),
+    BusinessName: Yup.string().min(2).max(25).required("Please enter your name"),
+    category: Yup.string().required("Please enter your category"),
+});
+
