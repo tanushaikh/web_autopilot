@@ -1,5 +1,6 @@
 $primary: #2563eb;
 $black: #0f172a;
+$pink: #ed4f9d;
 $greyscale-200: #e2e8f0;
 $greyscale-400: #94a3b8;
 $greyscale-500: #64748b;
@@ -30,7 +31,7 @@ $greyscale-600: #475569;
 
 .button {
   display: flex;
-  padding: 1rem;
+  padding: 1.05rem;
   justify-content: center;
   align-items: center;
   border-radius: 0.75rem;
@@ -59,7 +60,7 @@ $greyscale-600: #475569;
   color: $greyscale-500;
   font-size: 0.875rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .lable-input-box {
@@ -101,7 +102,6 @@ $greyscale-600: #475569;
 
 .auth-input-box {
   min-width: 400px;
-
 }
 
 @media screen and (max-width: 600px) {
@@ -112,28 +112,30 @@ $greyscale-600: #475569;
 
 // input common css
 .input-box-container {
-  display: flex;
+  // display: flex;
+  // align-items: center;
+  // gap: 0.75rem;
   padding: 0.87rem 1rem;
-  align-items: center;
-  gap: 0.75rem;
   border-radius: 0.75rem;
   border: 1px solid $greyscale-200;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
+  width: 400px;
 }
 
 .input-box-container-error {
-  display: flex;
+  // display: flex;
+  // align-items: center;
+  // gap: 0.75rem;
   padding: 0.87rem 1rem;
-  align-items: center;
-  gap: 0.75rem;
   border-radius: 0.75rem;
-  border: 1px solid #ed4f9d;
+  border: 1px solid $pink;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
+  width: 400px;
 }
 
 .icon-input-box {
   border: none;
-  width: 22.25rem;
+  // width: 16.25rem;
   color: $black;
   font-size: 1rem;
   font-weight: 600;
@@ -145,6 +147,11 @@ $greyscale-600: #475569;
 }
 
 // input select common css
+
+// .container-middleware {
+//   display: flex;
+//   align-items: center;
+// }
 
 .input-select-container {
   display: flex;
@@ -184,4 +191,8 @@ $greyscale-600: #475569;
 .sign-in-with-line {
   height: 2px;
   width: 9rem;
+}
+
+.checkbox {
+  // size: 24px;
 }

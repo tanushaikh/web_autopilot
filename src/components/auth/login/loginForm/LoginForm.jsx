@@ -129,7 +129,7 @@ const LoginForm = ({ loginWithRedirect }) => {
                     : "input-box-container"
                 }
               >
-                <div className="d-flex align-items-center">
+                <div className="d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
                     <svg
                       width="24"
@@ -285,11 +285,21 @@ const LoginForm = ({ loginWithRedirect }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                 >
-                  <option className="category-options text-gray-400" value="">Select Business Type</option>
-                  <option className="category-options" value="shop">Shop</option>
-                  <option className="category-options" value="hotel">Hotel</option>
-                  <option className="category-options" value="mercedes">Mercedes</option>
-                  <option className="category-options" value="audi">Audi</option>
+                  <option className="category-options text-gray-400" value="">
+                    Select Business Type
+                  </option>
+                  <option className="category-options" value="shop">
+                    Shop
+                  </option>
+                  <option className="category-options" value="hotel">
+                    Hotel
+                  </option>
+                  <option className="category-options" value="mercedes">
+                    Mercedes
+                  </option>
+                  <option className="category-options" value="audi">
+                    Audi
+                  </option>
                 </select>
               </div>
 
@@ -329,8 +339,9 @@ const LoginForm = ({ loginWithRedirect }) => {
               ) : null}
             </div>
             <div className="py-2 d-flex align-items-center justify-content-between">
-              <div>
+              <div className="d-flex align-items-center">
                 <input
+                  className="checkbox"
                   type="checkbox"
                   name="TermsAndConditions"
                   value={values.TermsAndConditions}
