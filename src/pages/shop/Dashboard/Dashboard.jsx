@@ -1,28 +1,49 @@
-import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { GoogleLogin } from "@react-oauth/google";
-
+import ToggleSwitch from "../componts/reusable/ToggleSwitch";
+import React, { useState } from 'react';
 const Dashboard = () => {
   const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
-  console.log(isAuthenticated, "auth");
-  console.log(user, "user");
+  // console.log(isAuthenticated, "auth");
+  // console.log(user, "user");
+  // const [switchState, setSwitchState] = useState(false);
+  const [switchState, setSwitchState] = useState({
+    ProductSummary: "",
+    SalesChart: "",
+    OrderSummary: "",
+
+  });
+
+
+  // console.log(switchState, "dashbord");
+  const handleSwitchChange = (newState, title) => {
+    let data = [...switchState]
+    // data.title = newState
+    setSwitchState(data)
+  };
   return (
     <div>
       <h1>Dashboard</h1>
-      {/* {isAuthenticated && <h5>{user.name}</h5>}
-      {isAuthenticated ? (
-        <button onClick={() => logout()}>logout</button>
-      ) : (
-        <button onClick={() => loginWithRedirect()}>login</button>
-      )} */}
-
-      <GoogleLogin
-        onSuccess={(credentialResponse) => {
-          console.log(credentialResponse);
-        }}
-        onError={() => {
-          console.log("Login Failed");
-        }}
+      <ToggleSwitch
+        title="Product Summary"
+        description=" switch component."
+        checked={switchState.ProductSummary}
+        value={"ProductSummary"}
+        onChange={handleSwitchChange}
+      />
+      <ToggleSwitch
+        title="Sales Chart"
+        description=" switch component."
+        checked={switchState.SalesChart}
+        value={"SalesChart"}
+        onChange={handleSwitchChange}
+      />
+      <ToggleSwitch
+        title="Order Summary"
+        description=" switch component."
+        checked={switchState.OrderSummary}
+        value={"OrderSummary"}
+        onChange={handleSwitchChange}
       />
     </div>
   );
