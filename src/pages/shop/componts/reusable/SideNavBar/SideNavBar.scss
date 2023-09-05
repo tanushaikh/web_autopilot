@@ -1,0 +1,15 @@
+.main-container-sidenav {
+  background-color: #f6f6f6;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.secondry-container-sidenav {
+  margin-left: 25px;
+}
+.sidenav-menu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
