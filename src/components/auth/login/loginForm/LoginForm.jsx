@@ -76,7 +76,7 @@ const LoginForm = ({ loginWithRedirect }) => {
                     </svg>
                     <input
                       className=" icon-input-box ms-2"
-                      placeholder="Email"
+                      placeholder="Enter Your Email Id"
                       type="email"
                       name="email"
                       value={values.email}
@@ -341,7 +341,7 @@ const LoginForm = ({ loginWithRedirect }) => {
             <div className="py-2 d-flex align-items-center justify-content-between">
               <div className="d-flex align-items-center">
                 <input
-                  className="checkbox"
+                  className="checkbox checkbox-terms-and-condition"
                   type="checkbox"
                   name="TermsAndConditions"
                   value={values.TermsAndConditions}

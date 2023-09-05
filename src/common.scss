@@ -155,7 +155,6 @@ $greyscale-600: #475569;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
     width: 300px;
   }
-
 }
 
 .icon-input-box {
@@ -218,6 +217,12 @@ $greyscale-600: #475569;
   width: 9rem;
 }
 
-.checkbox {
-  // size: 24px;
+.Dont-have-an-account {
+  // margin-top: 13rem;
+  position: relative;
+  top: 130px;
+}
+.checkbox-terms-and-condition {
+  width: 1.25rem;
+  height: 1.25rem;
 }
