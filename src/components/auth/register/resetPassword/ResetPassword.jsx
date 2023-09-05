@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { handleAuth } from "../../../../redux/slices/AuthSlice";
 import { useFormik } from "formik";
 import { ResetPasswordSchema } from "../../../../schemas/Schema";
+import EmailIcon from "../../../../icons/EmailIcon";
+import ErrorIcon from "../../../../icons/ErrorIcon";
 
 const initialValues = {
   email: "",
@@ -45,28 +47,7 @@ const ResetPassword = () => {
               >
                 <div className="d-flex align-items-center">
                   <div>
-                    <svg
-                      width="20"
-                      height="16"
-                      viewBox="0 0 20 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M17 1H3C1.89543 1 1 1.89543 1 3V13C1 14.1046 1.89543 15 3 15H17C18.1046 15 19 14.1046 19 13V3C19 1.89543 18.1046 1 17 1Z"
-                        stroke="#64748B"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M1 3L10 9L19 3"
-                        stroke="#64748B"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
+                    <EmailIcon />
                   </div>
                   <input
                     className="icon-input-box ms-2"
@@ -81,35 +62,7 @@ const ResetPassword = () => {
               </div>
               {errors.email && touched.email ? (
                 <div className="d-flex mt-1 align-items-center text-start text-pink">
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
-                      stroke="#ED4F9D"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M9 5.66675V9.00008"
-                      stroke="#ED4F9D"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M9 12.3333H9.00833"
-                      stroke="#ED4F9D"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <ErrorIcon />
                   <div className="ms-1 ">{errors.email}</div>
                 </div>
               ) : null}
