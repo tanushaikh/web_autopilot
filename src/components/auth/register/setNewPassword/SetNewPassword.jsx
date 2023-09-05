@@ -78,6 +78,7 @@ const SetNewPassword = () => {
                       />
                     </svg>
                     <input
+                      placeholder="New Password"
                       className="icon-input-box ms-2"
                       type={showPassword ? "text" : "password"}
                       name="password"
@@ -222,6 +223,7 @@ const SetNewPassword = () => {
                       />
                     </svg>
                     <input
+                      placeholder="Confirm New Password"
                       className="icon-input-box ms-2"
                       type={showPassword1 ? "text" : "password"}
                       name="confirm_password"
