@@ -1,13 +1,30 @@
 import React, { useState } from "react";
 import "./ToggleSwitch.css";
 
-const ToggleSwitch = ({ title, description, checked, onChange, value }) => {
+const ToggleSwitch = ({
+  title,
+  description,
+  checked,
+  onChange,
+  value,
+  name,
+}) => {
   const [isChecked, setIsChecked] = useState(checked || false);
+
+  // const handleChange = () => {
+  //   setIsChecked(!isChecked);
+  //   if (onChange) {
+  //     onChange(!isChecked);
+  //   }
+  // };
 
   const handleChange = () => {
     setIsChecked(!isChecked);
-    if (onChange) {
-      onChange(!isChecked, value);
+    if (value) {
+      value((prevState) => ({
+        ...prevState,
+        [name]: !isChecked,
+      }));
     }
   };
 

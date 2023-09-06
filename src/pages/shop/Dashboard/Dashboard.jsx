@@ -8,17 +8,14 @@ import SuppliersIcon from "../../../icons/SuppliersIcon";
 import AdminManagementIcon from "../../../icons/AdminManagementIcon";
 import SettingsIcon from "../../../icons/SettingsIcon";
 import SideNavBar from "../componts/reusable/SideNavBar/SideNavBar";
+import NavBar from "../componts/reusable/navbar/NavBar";
 const Dashboard = () => {
-  const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
-  // console.log(isAuthenticated, "auth");
-  // console.log(user, "user");
-  // const [switchState, setSwitchState] = useState(false);
   const [switchState, setSwitchState] = useState({
-    ProductSummary: "",
-    SalesChart: "",
-    OrderSummary: "",
+    ProductSummary: false,
+    SalesChart: false,
+    OrderSummary: false,
   });
-
+  console.log(switchState, "switchState");
   // console.log(switchState, "dashbord");
   const handleSwitchChange = (newState, title) => {
     let data = [...switchState];
@@ -26,36 +23,56 @@ const Dashboard = () => {
     setSwitchState(data);
   };
   return (
-    // <div>
-    //   <h1>Dashboard</h1>
-    //   <ToggleSwitch
-    //     title="Product Summary"
-    //     description=" switch component."
-    //     checked={switchState.ProductSummary}
-    //     value={"ProductSummary"}
-    //     onChange={handleSwitchChange}
-    //   />
-    //   <ToggleSwitch
-    //     title="Sales Chart"
-    //     description=" switch component."
-    //     checked={switchState.SalesChart}
-    //     value={"SalesChart"}
-    //     onChange={handleSwitchChange}
-    //   />
-    //   <ToggleSwitch
-    //     title="Order Summary"
-    //     description=" switch component."
-    //     checked={switchState.OrderSummary}
-    //     value={"OrderSummary"}
-    //     onChange={handleSwitchChange}
-    //   />
-    // </div>
     // <Container>
-    <Row>
+    <Row className="g-3">
       <Col className="col-5">
         <SideNavBar />
       </Col>
-      <Col className="col-18">rest of the content page</Col>
+      <Col className="col-19">
+        <Row>
+          <NavBar />
+        </Row>
+        <Row>
+          Please select and customize your dashboard as per your convenience
+        </Row>
+        <Row className="border rounded m-4">
+          <Col>
+            <ToggleSwitch
+              title="Product Summary"
+              description="Show on Dashboard"
+              checked={switchState.ProductSummary}
+              value={setSwitchState}
+              onChange={handleSwitchChange}
+              name={"ProductSummary"}
+            />
+            <ToggleSwitch
+              title="Sales Chart"
+              description="Show on Dashboard"
+              checked={switchState.SalesChart}
+              value={setSwitchState}
+              onChange={handleSwitchChange}
+              name={"SalesChart"}
+            />
+            <ToggleSwitch
+              title="Order Summary"
+              description="Show on Dashboard"
+              checked={switchState.OrderSummary}
+              value={setSwitchState}
+              onChange={handleSwitchChange}
+              name={"OrderSummary"}
+            />
+            <ToggleSwitch />
+            <ToggleSwitch />
+          </Col>
+          <Col>
+            <ToggleSwitch />
+            <ToggleSwitch />
+            <ToggleSwitch />
+            <ToggleSwitch />
+            <ToggleSwitch />
+          </Col>
+        </Row>
+      </Col>
     </Row>
     // </Container>
   );

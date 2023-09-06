@@ -27,7 +27,13 @@ const SideNavBar = () => {
             {/* Inventory */}
             <div className="d-flex align-items-center">
               <span>
-                <InventoryIcon />
+                {/* <InventoryIcon /> */}
+                <img
+                  width={24}
+                  src="https://i.ibb.co/S67CwN4/Frame-6-1.png"
+                  alt="Frame-6-1"
+                  border="0"
+                />
               </span>
               <span className="ms-2">Inventory</span>
             </div>
