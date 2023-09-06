@@ -33,9 +33,11 @@ const Dashboard = () => {
           <NavBar />
         </Row>
         <Row>
-          Please select and customize your dashboard as per your convenience
+          <div className="ms-4 mt-4 medium-text">
+            Please select and customize your dashboard as per your convenience
+          </div>
         </Row>
-        <Row className="border rounded m-4">
+        <Row className="border rounded m-4 gx-0">
           <Col>
             <ToggleSwitch
               title="Product Summary"

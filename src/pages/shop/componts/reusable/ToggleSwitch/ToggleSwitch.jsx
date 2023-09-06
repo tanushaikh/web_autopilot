@@ -11,13 +11,6 @@ const ToggleSwitch = ({
 }) => {
   const [isChecked, setIsChecked] = useState(checked || false);
 
-  // const handleChange = () => {
-  //   setIsChecked(!isChecked);
-  //   if (onChange) {
-  //     onChange(!isChecked);
-  //   }
-  // };
-
   const handleChange = () => {
     setIsChecked(!isChecked);
     if (value) {
@@ -50,7 +43,9 @@ const ToggleSwitch = ({
                 ></span>
               </label>
             </div>
-            <div className="switch-container-description">{description}</div>
+            <div className="switch-container-description mt-3">
+              {description}
+            </div>
           </div>
         </div>
       </div>
