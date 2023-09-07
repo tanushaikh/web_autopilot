@@ -4,6 +4,8 @@ import { Row, Col } from "react-bootstrap";
 import SideNavBar from "../componts/reusable/SideNavBar/SideNavBar";
 import NavBar from "../componts/reusable/navbar/NavBar";
 const Dashboard = () => {
+  const currentPath = window.location.pathname;
+
   const [switchState, setSwitchState] = useState({
     ProductSummary: false,
     SalesChart: false,
@@ -19,7 +21,7 @@ const Dashboard = () => {
   return (
     <Row className="g-3">
       <Col className="col-5">
-        <SideNavBar type="active" />
+        <SideNavBar currentPath={currentPath} />
       </Col>
       <Col className="col-19">
         <Row>

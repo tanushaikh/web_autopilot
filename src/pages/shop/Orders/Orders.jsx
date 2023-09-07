@@ -5,10 +5,11 @@ import SideNavBar from "../componts/reusable/SideNavBar/SideNavBar";
 import NavBar from "../componts/reusable/navbar/NavBar";
 
 const Orders = () => {
+  const currentPath = window.location.pathname;
   return (
     <Row className="g-3">
       <Col className="col-5">
-        <SideNavBar />
+        <SideNavBar currentPath={currentPath} />
       </Col>
       <Col className="col-19">
         <Row>

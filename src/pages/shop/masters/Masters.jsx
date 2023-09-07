@@ -10,6 +10,7 @@ import SettingsIcon from "../../../icons/SettingsIcon";
 import SideNavBar from "../componts/reusable/SideNavBar/SideNavBar";
 import NavBar from "../componts/reusable/navbar/NavBar";
 const Masters = () => {
+  const currentPath = window.location.pathname;
   const [switchState, setSwitchState] = useState({
     ProductSummary: false,
     SalesChart: false,
@@ -26,7 +27,7 @@ const Masters = () => {
     // <Container>
     <Row className="g-3">
       <Col className="col-5">
-        <SideNavBar />
+        <SideNavBar currentPath={currentPath} />
       </Col>
       <Col className="col-19">
         <Row>

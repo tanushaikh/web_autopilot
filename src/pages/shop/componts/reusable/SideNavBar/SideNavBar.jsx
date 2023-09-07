@@ -1,6 +1,6 @@
 import React from "react";
 import "./SideNavBar.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import SettingsIcon from "../../../../../icons/SettingsIcon";
 import LogOutIcon from "../../../../../icons/LogOutIcon";
@@ -10,9 +10,15 @@ import ReportsIcon from "../../../../../icons/ReportsIcon";
 import SuppliersIcon from "../../../../../icons/SuppliersIcon";
 import OrdersIcon from "../../../../../icons/OrdersIcon";
 import AdminManagementIcon from "../../../../../icons/AdminManagementIcon";
-const SideNavBar = ({ type }) => {
+const SideNavBar = ({ currentPath }) => {
   return (
-    <div style={{ height: "98vh" }}>
+    <div
+      style={{
+        height: "98vh",
+        position: "fixed",
+        width: "20%",
+      }}
+    >
       <div className="main-container-sidenav">
         <div className="secondry-container-sidenav">
           <div className="title-Dashboard-section mt-2 mb-4 pb-2">
@@ -20,16 +26,24 @@ const SideNavBar = ({ type }) => {
           </div>
           <div className="sidenav-menu-container">
             {/* Dashobard */}
-            <Link className="text-decoration-none" to="/shop/dashboard">
+            <NavLink
+              className="text-decoration-none"
+              // activeClassName="active"
+              to="/shop/dashboard"
+            >
               <div className="d-flex align-items-center ">
                 <span>
-                  <DashobardIcon />
+                  {currentPath == "/shop/dashboard" ? (
+                    <DashobardIcon color="#2563eb" />
+                  ) : (
+                    <DashobardIcon />
+                  )}
                 </span>
                 <span className="ms-2 ">Dashobard</span>
               </div>
-            </Link>
+            </NavLink>
             {/* Inventory */}
-            <Link className="text-decoration-none" to="/shop/inventory">
+            <NavLink className="text-decoration-none" to="/shop/inventory">
               <div className="d-flex align-items-center">
                 <span>
                   <img
@@ -41,43 +55,59 @@ const SideNavBar = ({ type }) => {
                 </span>
                 <span className="ms-2">Inventory</span>
               </div>
-            </Link>
+            </NavLink>
             {/* Reports */}
-            <Link className="text-decoration-none" to="/shop/reports">
+            <NavLink className="text-decoration-none" to="/shop/reports">
               <div className="d-flex align-items-center">
                 <span>
-                  <ReportsIcon />
+                  {currentPath == "/shop/reports" ? (
+                    <ReportsIcon color="#2563eb" />
+                  ) : (
+                    <ReportsIcon />
+                  )}
                 </span>
                 <span className="ms-2">Reports</span>
               </div>
-            </Link>
+            </NavLink>
             {/* Suppliers */}
-            <Link className="text-decoration-none" to="/shop/suppliers">
+            <NavLink className="text-decoration-none" to="/shop/suppliers">
               <div className="d-flex align-items-center">
                 <span>
-                  <SuppliersIcon />
+                  {currentPath === "/shop/suppliers" ? (
+                    <SuppliersIcon color="#2563eb" />
+                  ) : (
+                    <SuppliersIcon />
+                  )}
                 </span>
                 <span className="ms-2">Suppliers</span>
               </div>
-            </Link>
+            </NavLink>
             {/* Orders */}
-            <Link className="text-decoration-none" to="/shop/orders">
+            <NavLink className="text-decoration-none" to="/shop/orders">
               <div className="d-flex align-items-center">
                 <span>
-                  <OrdersIcon />
+                  {currentPath == "/shop/orders" ? (
+                    <OrdersIcon color="#2563eb" />
+                  ) : (
+                    <OrdersIcon />
+                  )}
                 </span>
                 <span className="ms-2">Orders</span>
               </div>
-            </Link>
+            </NavLink>
             {/* Admin Management */}
-            <Link className="text-decoration-none" to="/shop/masters">
+            <NavLink className="text-decoration-none" to="/shop/masters">
               <div className="d-flex align-items-center">
                 <span>
-                  <AdminManagementIcon color={"#2563EB"} />
+                  {currentPath == "/shop/masters" ? (
+                    <AdminManagementIcon color={"#2563EB"} />
+                  ) : (
+                    <AdminManagementIcon />
+                  )}
                 </span>
-                <span className="text-primary ms-2">Admin Management</span>
+                <span className=" ms-2">Admin Management</span>
               </div>
-            </Link>
+            </NavLink>
           </div>
         </div>
         {/* setting and logout section */}
