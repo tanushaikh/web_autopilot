@@ -239,7 +239,7 @@ const LoginForm = ({ loginWithRedirect }) => {
                 let decoded = jwt_decode(credentialResponse.credential);
                 console.log(decoded);
                 if (decoded.name) {
-                  navigate("/");
+                  navigate("/shop/masters");
                 }
               }}
               onError={() => {
