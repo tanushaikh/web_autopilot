@@ -1,12 +1,6 @@
-import { useAuth0 } from "@auth0/auth0-react";
-import { GoogleLogin } from "@react-oauth/google";
 import ToggleSwitch from "../componts/reusable/ToggleSwitch/ToggleSwitch";
 import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import DashobardIcon from "../../../icons/DashobardIcon";
-import SuppliersIcon from "../../../icons/SuppliersIcon";
-import AdminManagementIcon from "../../../icons/AdminManagementIcon";
-import SettingsIcon from "../../../icons/SettingsIcon";
+import { Row, Col } from "react-bootstrap";
 import SideNavBar from "../componts/reusable/SideNavBar/SideNavBar";
 import NavBar from "../componts/reusable/navbar/NavBar";
 const Dashboard = () => {
@@ -23,60 +17,19 @@ const Dashboard = () => {
     setSwitchState(data);
   };
   return (
-    // <Container>
     <Row className="g-3">
       <Col className="col-5">
-        <SideNavBar />
+        <SideNavBar type="active" />
       </Col>
       <Col className="col-19">
         <Row>
           <NavBar />
         </Row>
         <Row>
-          <div className="ms-4 mt-4 medium-text">
-            Please select and customize your dashboard as per your convenience
-          </div>
-        </Row>
-        <Row className="border rounded m-4 gx-0">
-          <Col>
-            <ToggleSwitch
-              title="Product Summary"
-              description="Show on Dashboard"
-              checked={switchState.ProductSummary}
-              value={setSwitchState}
-              onChange={handleSwitchChange}
-              name={"ProductSummary"}
-            />
-            <ToggleSwitch
-              title="Sales Chart"
-              description="Show on Dashboard"
-              checked={switchState.SalesChart}
-              value={setSwitchState}
-              onChange={handleSwitchChange}
-              name={"SalesChart"}
-            />
-            <ToggleSwitch
-              title="Order Summary"
-              description="Show on Dashboard"
-              checked={switchState.OrderSummary}
-              value={setSwitchState}
-              onChange={handleSwitchChange}
-              name={"OrderSummary"}
-            />
-            <ToggleSwitch />
-            <ToggleSwitch />
-          </Col>
-          <Col>
-            <ToggleSwitch />
-            <ToggleSwitch />
-            <ToggleSwitch />
-            <ToggleSwitch />
-            <ToggleSwitch />
-          </Col>
+          <div className="ms-4 mt-4 medium-text">Dashboard</div>
         </Row>
       </Col>
     </Row>
-    // </Container>
   );
 };
 
