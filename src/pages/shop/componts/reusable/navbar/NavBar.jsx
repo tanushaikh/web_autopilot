@@ -11,7 +11,11 @@ const NavBar = () => {
             <span>
               <SearchIcon />
             </span>
-            <input className="navbar-search-input-box" type="text" />
+            <input
+              className="navbar-search-input-box"
+              placeholder="Search something"
+              type="text"
+            />
           </div>
         </div>
         <div className="d-flex align-items-center">

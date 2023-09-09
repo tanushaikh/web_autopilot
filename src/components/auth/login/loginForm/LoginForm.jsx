@@ -13,6 +13,7 @@ import LockIcon from "../../../../icons/LockIcon";
 import ErrorIcon from "../../../../icons/ErrorIcon";
 import EyeCloseIcon from "../../../../icons/EyeCloseIcon";
 import EyeOpenIcon from "../../../../icons/EyeOpenIcon";
+import DownArrow from "../../../../icons/DownArrow";
 const initialValues = {
   email: "",
   password: "",
@@ -23,6 +24,8 @@ const LoginForm = ({ loginWithRedirect }) => {
   const data = useSelector((state) => state.auth.value);
   const dispatch = useDispatch();
   const [showPassword, setShowPassword] = useState(false);
+  const [selectCategory, setSelectCategory] = useState("Select Business Type");
+  const [showCategory, setShowCategory] = useState(false);
 
   const navigate = useNavigate();
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
@@ -125,7 +128,7 @@ const LoginForm = ({ loginWithRedirect }) => {
               ) : null}
             </div>
             <div className="mb-4">
-              <div
+              {/* <div
                 className={
                   errors.category && touched.category
                     ? "input-box-container-error"
@@ -160,8 +163,53 @@ const LoginForm = ({ loginWithRedirect }) => {
                     Audi
                   </option>
                 </select>
+              </div> */}
+              <div
+                className={
+                  errors.category && touched.category
+                    ? "input-box-container-error"
+                    : "input-box-container"
+                }
+              >
+                <div
+                  onClick={() => setShowCategory(!showCategory)}
+                  className="d-flex align-items-center justify-content-between"
+                >
+                  <span>{selectCategory}</span>
+                  <span>
+                    <DownArrow />
+                  </span>
+                </div>
               </div>
-
+              {showCategory && (
+                <div>
+                  <div
+                    onClick={() => {
+                      setSelectCategory("Hotel");
+                      setShowCategory(!showCategory);
+                    }}
+                  >
+                    Hotel
+                  </div>
+                  <div
+                    className="my-1"
+                    onClick={() => {
+                      setSelectCategory("Restaurant");
+                      setShowCategory(!showCategory);
+                    }}
+                  >
+                    Restaurant
+                  </div>
+                  <div
+                    onClick={() => {
+                      setSelectCategory("Hostel");
+                      setShowCategory(!showCategory);
+                    }}
+                  >
+                    Hostel
+                  </div>
+                </div>
+              )}
               {errors.category && touched.category ? (
                 <div className="d-flex mt-1 align-items-center text-start text-pink">
                   <ErrorIcon />
