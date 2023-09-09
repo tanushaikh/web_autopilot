@@ -10,6 +10,25 @@ $greyscale-600: #475569;
   width: 100%;
 }
 
+.login-select-options-container {
+  position: absolute;
+  background-color: #fff;
+  width: 400px;
+  box-shadow: 0px 10px 22px 0px rgba(45, 77, 108, 0.15);
+  padding: 5px;
+  border-radius: 0.75rem;
+}
+
+.login-select-options-container div {
+  padding: 0.56rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.login-select-options-container div:hover {
+  background-color: #E0E7FF;
+}
+
 .register-project-images-and-text-container {
   display: flex;
   justify-content: center;
@@ -24,9 +43,11 @@ $greyscale-600: #475569;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 125%; /* 1.875rem */
+  line-height: 125%;
+  /* 1.875rem */
   letter-spacing: 0.0125rem;
 }
+
 .register-project-related-text-small {
   color: #334155;
   font-size: 0.875rem;
@@ -233,6 +254,10 @@ $greyscale-600: #475569;
   color: $black;
 }
 
+.category-options:hover {
+  background-color: #E0E7FF;
+}
+
 // sign-in-with
 
 .sign-in-with-line {
@@ -264,6 +289,7 @@ $greyscale-600: #475569;
   font-size: 1rem;
   font-weight: 500;
 }
+
 .title-Dashboard-section {
   font-size: 1.5rem;
   font-style: normal;
@@ -288,6 +314,7 @@ $greyscale-600: #475569;
   flex-direction: column;
   gap: 1.5rem;
 }
+
 .text-decoration-none {
   text-decoration: none;
   color: #64748b;
@@ -295,8 +322,9 @@ $greyscale-600: #475569;
   font-size: 1rem;
   font-weight: 500;
 }
-.side-nav-menu-text {
-}
+
+.side-nav-menu-text {}
+
 // navbar style
 
 .container-navbar-main {
@@ -333,6 +361,7 @@ $greyscale-600: #475569;
   /* 1.575rem */
   letter-spacing: 0.0125rem;
 }
+
 // modal
 .modal-wrapper {
   left: 0;
@@ -341,6 +370,7 @@ $greyscale-600: #475569;
   right: 0;
   background-color: rgba(119, 119, 119, 0.4);
 }
+
 .modal-container {
   position: fixed;
   top: 50%;
@@ -348,6 +378,7 @@ $greyscale-600: #475569;
   transform: translate(-50%, -50%);
   max-width: 30rem;
 }
+
 .modal-container img {
   position: fixed;
   top: 50%;
@@ -355,11 +386,13 @@ $greyscale-600: #475569;
   transform: translate(-50%, -50%);
   max-width: 30rem;
 }
+
 .modal-container .modal-text {
   position: relative;
   top: 180px;
   max-width: 30rem;
 }
+
 .modal-containerrrr {
   position: fixed;
   top: 50%;
@@ -372,6 +405,7 @@ $greyscale-600: #475569;
   z-index: 1000;
   text-align: center;
 }
+
 .modal-background {
   position: fixed;
   top: 0;
@@ -384,9 +418,11 @@ $greyscale-600: #475569;
   justify-content: center;
   align-items: center;
 }
+
 .modal-cancel-button {
   position: relative;
 }
+
 .modal-cancel-button button {
   position: absolute;
   right: -13px;

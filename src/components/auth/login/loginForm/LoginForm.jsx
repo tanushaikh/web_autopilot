@@ -174,6 +174,10 @@ const LoginForm = ({ loginWithRedirect }) => {
                 <div
                   onClick={() => setShowCategory(!showCategory)}
                   className="d-flex align-items-center justify-content-between"
+                  name="category"
+                  value={values.category}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                 >
                   <span>{selectCategory}</span>
                   <span>
@@ -182,7 +186,7 @@ const LoginForm = ({ loginWithRedirect }) => {
                 </div>
               </div>
               {showCategory && (
-                <div>
+                <div className="login-select-options-container">
                   <div
                     onClick={() => {
                       setSelectCategory("Hotel");
