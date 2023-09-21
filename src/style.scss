@@ -18,13 +18,16 @@ $theme-colors: (
   // "darkBlue": #748da6,
   "primary": #2563eb,
   "black": #0f172a,
-  "pink": #ED4F9D,
-  "gray-50":#F0F1F3,
+  "white": #fff,
+  "pink": #ed4f9d,
+  "gray-50": #f0f1f3,
   "gray-200": #e2e8f0,
   "gray-400": #94a3b8,
   "gray-500": #64748b,
   "gray-600": #475569,
-  "background":#FAFAFA
+  "background": #fafafa,
+  "background-new": #eef0f2,
+  "yellow": #f6a723
 );
 /* This pen is using external base CSS stylesheet(s) in the CSS Settings */
 // $input-btn-focus-width: 0.07rem;
@@ -52,7 +55,7 @@ $shadow-red: 0px 1px 2px 0px rgb(247, 19, 19);
 $input-color: 1px solid #e2e8f0;
 $input-btn-focus-color: #00ffbb;
 $btn-border-radius-lg: 0.75rem;
-$btn-border-radius-sm: 0.50rem;
+$btn-border-radius-sm: 0.5rem;
 $input-btn-font-size: 1rem;
 $input-font-weight: 700;
 $font-weight-normal: 400;

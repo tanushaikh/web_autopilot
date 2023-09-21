@@ -46,12 +46,21 @@ const SideNavBar = ({ currentPath }) => {
             <NavLink className="text-decoration-none" to="/shop/inventory">
               <div className="d-flex align-items-center">
                 <span>
-                  <img
-                    width={24}
-                    src="https://i.ibb.co/S67CwN4/Frame-6-1.png"
-                    alt="Frame-6-1"
-                    border="0"
-                  />
+                  {currentPath === "/shop/inventory" ? (
+                    <img
+                      width={24}
+                      src="https://i.ibb.co/pyHRLjx/Frame-6-5.png"
+                      alt="Frame-6-1"
+                      border="0"
+                    />
+                  ) : (
+                    <img
+                      width={24}
+                      src="https://i.ibb.co/S67CwN4/Frame-6-1.png"
+                      alt="Frame-6-1"
+                      border="0"
+                    />
+                  )}
                 </span>
                 <span className="ms-2">Inventory</span>
               </div>
